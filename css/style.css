@@ -1,0 +1,590 @@
+#header {
+	width: 100%;
+	margin: auto;
+	height: 100px;
+	background: #24292C;
+	position: absolute;
+	top: 0px;
+}
+
+body {
+	font-family: verdana, arial, sans-serif;
+	font-size: 14px;
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+    text-align: center;
+    background: linear-gradient(to left, #24292C, #7F7F7F, #C2C2C2, #EDEBE7, #EDEBE7, #C2C2C2, #7F7F7F, #24292C);
+    background-size: 200% 100%;
+	animation: gradientBG 8s ease infinite;
+   
+}
+
+/* Animated background function - gradient */
+
+@keyframes gradientBG {
+	0% {background-position: 50% 50%;}   
+    
+	25% {background-position: 0% 50%;}
+    
+    50% {background-position: 50% 50%;}
+    
+    75% {background-position: 100% 50%;}
+    
+	100% {background-position: 50% 50%;}
+}
+
+h1 {
+	color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+p {
+	color: black;
+	font-size: 20px;
+}
+
+/* List of navigation bar */
+
+ol {
+    margin: auto;
+    list-style-position: inside;
+    position:relative;
+    right: 10px;
+}
+
+li {
+	display: inline-block;
+	padding: 22px 0px;
+	font-size: 22px;
+}
+
+/* Navigation bar style with hover and selected/active tab */
+
+.nav {
+	background-color: #7F7F7F;
+	width: 100%;
+    text-shadow: 1px 1px 4px #000000;
+}
+
+.nav a {
+	color: white;
+	text-decoration: none;
+	padding: 20px;
+}
+
+.nav a:hover {
+	background-color: #C2C2C2;
+}
+
+.nav a.active {
+	background-color: #24292C;
+	color: white;
+}
+
+footer {
+	position: absolute;
+	top: 800%;
+	width: 100%;
+	text-align: center;
+    text-shadow: 1px 1px 1px grey, 0 0 25px grey, 0 0 5px grey;
+}
+
+#content {
+	width: 60%;
+    margin: 0 auto;
+	background: #B1B1B1;
+    color: black;
+	border: 3px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15px 15px;
+}
+
+/* Input/forms display */
+
+input {
+	width: 200px;
+	padding: 12px 20px;
+	display: inherit;
+	border: 2px solid black;
+	border-radius: 200px;
+	box-sizing: border-box;
+    position: relative;
+    bottom: 10px;
+    right: 20px;
+    box-shadow: 5px 5px 5px grey;
+    outline: 0;
+    margin: auto;
+    font-weight: bold;
+}
+
+button {
+	width: 120px;
+	height: 80px;
+	background-color: #B1B1B1;
+	color: black;
+	padding: 14px 15px;
+	font-size: 18px;
+	margin: 10px 0px;
+	border: 2px solid black;
+	border-radius: 40px;
+	cursor: pointer;
+	position: relative;
+	left: 150px;
+	bottom: 150px;
+    box-shadow: 5px 5px 5px grey;
+    outline:0;
+}
+
+button:hover {
+	background-color: #C2C2C2;
+    border: 3px solid black;
+}
+
+#loginButton {
+    font-weight: bold;
+    position: relative;
+    bottom: 110px;
+}
+
+#registerButton {
+    font-weight: bold;
+    position: relative;
+    bottom: 235px;
+}
+
+/* Login nd register failure message */
+
+#loginFailure, #registerFailure {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px red, 0 0 25px red, 0 0 5px darkred;
+    position: relative;
+    bottom: 60px;
+    right: 50px;
+}
+
+/* Welcome logged in user message */
+
+#loggedInUser {
+    position: relative;
+    font-weight: bold;
+    right: 80px;
+    color: black;
+    font-size: 25px;
+    margin: 64px 0 0 120px;
+    display: block;
+}
+
+#logoutButton {
+    position: relative;
+    top: 160px;
+    right: 140px;
+    font-weight: bold;
+}
+
+#clearRankingButton {
+	height: 1px;
+	position: relative;
+	top: 150px;
+    right: 140px;
+    font-weight: bold;
+}
+
+#clearRatingButton {
+	height: 1px;
+	position: relative;
+	top: 240px;
+    right: 140px;
+    font-weight: bold;
+}
+
+/* Labels for input */
+
+#loginForms label {
+	display: inline-block;
+    font-weight: bold;
+	min-width: 100px;
+	text-align: center;
+    position: relative;
+    right: 190px;
+    top: 20px;
+    top: 20px;
+    font-size: 16px;
+    
+}
+
+#registerForms label {
+	display: inline-block;
+    font-weight: bold;
+	min-width: 100px;
+    margin-left: -55px;
+	text-align: center;
+    position: relative;
+    right: 190px;
+    top: 20px;
+    font-size: 16px;
+}
+
+/* Game canvas */
+
+#gameScreen {
+	width: 60%;
+	height: 600%;
+	border: 3px solid black;
+    border-radius: 15px 15px;
+}
+
+/* Game score display */
+
+#score {
+	color: white;
+	font-size: 22px;
+	font-weight: bold;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+	position: absolute;
+	width: 100%;
+	top: 180%;
+}
+
+/* Game level display */
+
+#level {
+	color: white;
+	font-size: 24px;
+	font-weight: bold;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+	position: absolute;
+	width: 100%;
+	top: 150%;
+}
+
+/* Ranking table with hover */
+
+table, th, td {
+    border: 3px solid black;
+    border-collapse: collapse;
+    margin: auto;
+    color: black;
+    width: 610px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;    
+}
+
+table th {
+    background-color: #24292C;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+table tr:hover {
+    background-color: white;
+    text-shadow: 1px 1px 4px black;
+    
+}
+
+/* Stop Motion icon */
+
+img#stopMotionIcon {
+    width:50px;
+    height:50px;
+    position: absolute;
+    right: 3%;
+    top: 10%;
+    cursor: pointer;
+}
+
+/* Social media icons with hover */
+
+.icon-bar {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.5s ease;
+    color: white;
+    font-size: 20px;
+}
+
+.icon-bar a:hover {
+    background-color: black;
+}
+
+.facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.google {
+    background: #dd4b39;
+    color: white;
+}
+
+.linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.youtube {
+    background: #bb0000;
+    color: white;
+}
+
+/* Show password eye icon for register page */
+
+#registerEye {
+    position: relative;
+    top: 290px;
+    left: 70px;
+    font-size:18px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* Show confirm password eye icon for register page */
+
+#confirmEye {
+    position: relative;
+    top: 352px;
+    left: 50px;
+    font-size:18px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* Show password eye icon for login page */
+
+#loginEye {
+    position: relative;
+    top: 103px;
+    left: 60px;
+    font-size:18px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* Rating stars display with hover */
+
+.rating-form .form-group{
+	margin-top: 320px;
+    border: 0;
+}
+
+.rating-form .form-item {
+    position: relative;
+    margin: auto;
+    width: 400px;
+    text-align: center;
+    direction: rtl;
+}
+
+.rating-form input[type='radio'] {
+	display: none
+}
+
+.rating-star {
+    display: inline-block;
+    position: relative;
+}
+
+.rating-form label .fa {
+    font-size: 40px; font-size: 4rem;
+    line-height: 40px;
+    cursor: pointer;     
+}
+
+.rating-form label .fa-star {
+    position: absolute;
+    left: 0; top: 0;
+    opacity: 0;
+}
+
+.rating-form label:hover .fa-star,
+.rating-form label:focus .fa-star,
+.rating-form label:hover ~ label .fa-star,
+.rating-form label:focus ~ label .fa-star,
+.rating-form input[type='radio']:checked ~ label .fa-star {
+    opacity: 0.75;
+    color: gold;
+}
+
+/* Google pie chart */
+
+#piechart{
+    position: relative;
+    bottom: 400px;
+    right: 200px;
+    width: 0px;
+    height: 0px;
+    margin: auto;
+}
+
+/* Feedback message after star onclick */
+
+#feedbackResult {
+    font-size: 26px;
+    color: gold;
+    text-shadow: 3px 3px 3px black, 0 0 25px black, 0 0 5px black;
+}
+
+/* Menu */
+#menu {
+    position: relative;
+    bottom: 530px;
+    display: block;
+    width: 540px;
+    font-size: 42px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black, 0 0 25px black, 0 0 5px black;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: dodgerblue;
+    animation: logo-ani 1.5s linear infinite;
+}
+
+/* Menu options */
+#start, #instructions {
+    position: relative;
+    bottom: 530px;
+    font-size: 42px;
+    color: dodgerblue;
+    text-shadow: 2px 2px 2px black, 0 0 25px black, 0 0 5px black;
+    cursor: pointer;
+}
+
+#difficulty {
+    position: relative;
+    bottom: 530px;
+    font-size: 42px;
+    color: dodgerblue;
+    text-shadow: 2px 2px 2px black, 0 0 25px black, 0 0 5px black;
+}
+
+/* Difficulty selection */
+#difficultyChoice {
+    position: relative;
+    bottom: 550px;
+    font-size: 48px;
+    color: dodgerblue;
+    text-shadow: 2px 2px 2px black, 0 0 25px black, 0 0 5px black;
+    height: auto;
+}
+
+#easy, #medium, #hard {
+    cursor:pointer;
+    padding: 10px;
+    font-size: 32px;
+}
+
+#easy:hover, #medium:hover, #hard:hover {
+    background-color: rgba(150,150, 200,0.75);
+    border-radius: 15px;
+}
+
+/* Back selection */
+#back {
+    position: relative;
+    bottom: 500px;
+    font-size: 42px;
+    color: dodgerblue;
+    text-shadow: 2px 2px 2px black, 0 0 25px black, 0 0 5px black;
+    cursor: pointer;
+    display: none;
+}
+
+/* Text on pause/esc key */
+#pause {
+    position: relative;
+    bottom: 400px;
+    font-size: 50px;
+    font-weight: bold;
+    color: darkred;
+    text-shadow: 2px 2px 2px black, 0 0 25px black, 0 0 5px black;
+    display: none;
+}
+
+/* Game Over text */
+#over {
+    position: relative;
+    bottom: 500px;
+    font-size: 50px;
+    font-weight: bold;
+    color: darkred;
+    text-shadow: 2px 2px 2px black, 0 0 25px black, 0 0 5px black;
+    display: none;
+}
+
+#save {
+    position: relative;
+    bottom: 500px;
+    font-size: 42px;
+    color: dodgerblue;
+    text-shadow: 2px 2px 2px black, 0 0 25px black, 0 0 5px black;
+    cursor: pointer;
+    display: none;
+}
+
+#mainMenu {
+    position: relative;
+    bottom: 500px;
+    font-size: 42px;
+    color: dodgerblue;
+    text-shadow: 2px 2px 2px black, 0 0 25px black, 0 0 5px black;
+    cursor: pointer;
+    display: none;
+}
+
+#instructionsContent {
+    position: relative;
+    bottom: 500px;
+    font-size: 28px;
+    line-height: 50px;
+    color: dodgerblue;
+    text-shadow: 2px 2px 2px black, 0 0 25px black, 0 0 5px black;
+    display: none;
+}
+
+/* Menu animation */
+@-webkit-keyframes logo-ani{
+    50%{-webkit-transform: scale(1.3,1.3);}
+    100%{-webkit-transform: scale(1.0,1.0);}
+}
+
+#start:hover:before, #instructions:hover:before, #back:hover:before, #save:hover:before, #mainMenu:hover:before{
+    content: ">";
+    margin-right: 10px;
+}
+
+#start:hover:after, #instructions:hover:after, #back:hover:after, #save:hover:after, #mainMenu:hover:after{
+    content: "<";
+    margin-left: 10px;
+}
+
+/* Volume icon */
+#volume {
+    position: absolute;
+	top: 170%;
+    left: 22%;
+    font-size:36px;
+    z-index: 1;
+    cursor: pointer;
+    color: navy;
+}
